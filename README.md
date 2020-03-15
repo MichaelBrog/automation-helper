@@ -36,8 +36,8 @@ Timestamp#mouse#type#coordinate
 2020-03-15 16:35:31.959277#mouse#clickleft#(-805, 972)
 ```
 
-## Steps for installing a virtual environment Installing on windows:
-It is reeccomended for this project to create a virtual env:
+## Steps for installing a virtual environment
+It is recommended for this project to create a virtual env:
 https://packaging.python.org/guides/installing-using-pip-and-virtual-environments/
 
 ### Installing on windows

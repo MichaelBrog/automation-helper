@@ -2,6 +2,8 @@
 
 Tool to help automate certain tasks that require simular keyboard or mouse inputs by providing a GUI that allows a user to create and delete text files that you can then record your inputs into. This file can be later played back simulating the inputs in real time. 
 
+![GUI](https://i.imgur.com/uTELZu2.jpg)
+
 ## Usage 
 
 To Start the application launch the GUI using:

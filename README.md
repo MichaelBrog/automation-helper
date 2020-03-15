@@ -1,8 +1,8 @@
 #  Python Automation Helper
 [**About**](#About)<br>
 [**Usage**](#Usage)<br>
-[**Installation**](#Steps-for-installing-a-virtual-environment-Installing-on-windows:)<br>
-[**Create Executable**](#Creating-an-EXE)<br>
+[**Installation**](#Installing)<br>
+[**Create Executable**](#Creating-an-Executable-file)<br>
 # About
 
 Tool to help automate certain tasks that require simular keyboard or mouse inputs by providing a GUI that allows a user to create and delete text files that you can then record your inputs into. This file can be later played back simulating the inputs in real time. 

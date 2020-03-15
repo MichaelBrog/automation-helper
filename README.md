@@ -1,10 +1,15 @@
-## python automation helper
+#  Python Automation Helper
+[**About**](#About)<br>
+[**Usage**](#Usage)<br>
+[**Installation**](#Steps-for-installing-a-virtual-environment-Installing-on-windows:)<br>
+[**Create Executable**](#Creating-an-EXE)<br>
+# About
 
 Tool to help automate certain tasks that require simular keyboard or mouse inputs by providing a GUI that allows a user to create and delete text files that you can then record your inputs into. This file can be later played back simulating the inputs in real time. 
 
 ![GUI](https://i.imgur.com/uTELZu2.jpg)
 
-## Usage 
+# Usage 
 
 To Start the application launch the GUI using:
 ```shell
@@ -36,16 +41,24 @@ Timestamp#mouse#type#coordinate
 2020-03-15 16:35:31.959277#mouse#clickleft#(-805, 972)
 ```
 
-## Steps for installing a virtual environment
+# Installing
 It is recommended for this project to create a virtual env:
 https://packaging.python.org/guides/installing-using-pip-and-virtual-environments/
 
-### Installing on windows
-
-Download pip and update it using
+## Installing pip
+**Windows**
 ```shell 
 py -m pip install --upgrade pip
 ```
+**MacOS**
+```shell
+python3 -m pip install --user --upgrade pip
+```
+
+## Installing virtual env
+
+### Installing on windows
+
 Install virtual env
 ```shell
 py -m pip install --user virtualenv
@@ -63,10 +76,7 @@ Installing the dependencies from requirements.txt
 pip install -r requirements.txt
 ```
 ## Installing on MacOS/Linux
-Install and/or update pip
-```shell
-python3 -m pip install --user --upgrade pip
-```
+
 Install virtual env
 ```shell
 python3 -m pip install --user virtualenv
@@ -84,4 +94,17 @@ source env/bin/activate
 Installing the dependencies from requirements.txt
 ```shell
 pip install -r requirements.txt
+```
+
+# Creating an Executable file
+An EXE file can be created by using pyinstaller.
+
+Pyinstaller can be installed using pip, if you don't have pip see steps [**above**](##Installing-pip).
+
+```shell
+pyinstaller --onefile --windowed gui.py
+```
+If it is correctly installed, the exe will appear in:
+```shell
+...\automation-helper\dist\gui.exe
 ```

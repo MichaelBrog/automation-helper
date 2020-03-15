@@ -2,7 +2,7 @@
 [**About**](#About)<br>
 [**Usage**](#Usage)<br>
 [**Installation**](#Installing)<br>
-[**Create Executable**](#Creating-an-Executable-file)<br>
+[**Create an Executable file**](#Creating-an-Executable-file)<br>
 # About
 
 Tool to help automate certain tasks that require simular keyboard or mouse inputs by providing a GUI that allows a user to create and delete text files that you can then record your inputs into. This file can be later played back simulating the inputs in real time. 
@@ -75,7 +75,7 @@ Installing the dependencies from requirements.txt
 ```shell
 pip install -r requirements.txt
 ```
-## Installing on MacOS/Linux
+### Installing on MacOS/Linux
 
 Install virtual env
 ```shell

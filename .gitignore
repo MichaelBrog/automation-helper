@@ -1,3 +1,6 @@
 venv
 events
 env
+build
+dist
+__pycache__

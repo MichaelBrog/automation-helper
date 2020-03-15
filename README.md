@@ -85,11 +85,3 @@ Installing the dependencies from requirements.txt
 ```shell
 pip install -r requirements.txt
 ```
-
-https://packaging.python.org/guides/installing-using-pip-and-virtual-environments/
-
-creating virtual env:
-py -m venv env
-
-activating a virtual env:
-.\env\Scripts\activate

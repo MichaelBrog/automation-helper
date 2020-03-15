@@ -49,12 +49,12 @@ def eventReplayer(filename):
 def mouseCommand(action, value):
     mouse = MouseController()
     x, y = map(float, re.findall(r'-?\d+\.?\d*', value))
-    if action == 'move':
-        mouse.position = (x, y)
     if action == 'clickleft':
+        mouse.position = (x, y)
         mouse.press(MouseButton.left)
         mouse.release(MouseButton.left)
     if action == 'clickright':
+        mouse.position = (x, y)
         mouse.press(MouseButton.right)
         mouse.release(MouseButton.right)
     if action == 'scrolldown':

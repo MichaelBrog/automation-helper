@@ -24,8 +24,8 @@ class MyFirstGUI:
 
 
         self.master = master
-        master.title("A simple GUI")
-        self.label = Label(master, text="Python automation helper!")
+        master.title("Python automation helper")
+        self.label = Label(root, text="Press f8 to stop recording")
         self.flist = os.listdir('./events')
 
         def play():
@@ -33,21 +33,26 @@ class MyFirstGUI:
             if selected:
                 filename = "./events/" + self.flist[selected[0]]
                 eventReplayer(filename)
+                self.errorText.set("Finished playback.")
 
         def Record():
-            selected = self.lb.curselection()
-            eventListener(self.flist[selected[0]])
-            self.errorText.set("Recording saved.")
+            if self.lb.curselection():
+                selected = self.lb.curselection()
+                eventListener(self.flist[selected[0]])
+                self.errorText.set("Recording saved.")
 
         def addFile():
-            fileToAdd = self.name.get() + '.txt'
-            open("./events/" + fileToAdd, 'a').close()
+            fileToAdd = self.name.get()
+            if len(fileToAdd) > 0:
+                if not fileToAdd.endswith(".txt"):
+                    fileToAdd = fileToAdd + '.txt'
+                open("./events/" + fileToAdd, 'a').close()
 
-            self.flist.append(fileToAdd)
-            self.lb.delete(0, END) # clear
-            self.flist = os.listdir('./events')
-            for n in self.flist: self.lb.insert(END, n)
-            self.errorText.set("Successfully created file.")
+                self.flist.append(fileToAdd)
+                self.lb.delete(0, END) # clear
+                self.flist = os.listdir('./events')
+                for n in self.flist: self.lb.insert(END, n)
+                self.errorText.set("Successfully created file.")
 
 
         def deleteFile():
@@ -65,12 +70,11 @@ class MyFirstGUI:
 
         # Create the elements of the GUI
         self.File_Entry = Entry(root, textvariable = self.name)
-        self.play_button = Button(root, text='Play selected', command=play)
-        self.record_button = Button(root, text='Record', command=Record)
-        self.add_file_button = Button(root, text='Add file', command=addFile)
-        self.delete_button = Button(root, text='Delete file', command=deleteFile)
-        self.label = Label(master, text="Python automation helper!")
-        self.error = Label(master, textvariable=self.errorText)
+        self.play_button = Button(root, text='Play selected', width=10, command=play)
+        self.record_button = Button(root, text='Record', width=10, command=Record)
+        self.add_file_button = Button(root, text='Add file', width=10, command=addFile)
+        self.delete_button = Button(root, text='Delete file', width=10, command=deleteFile)
+        self.error = Label(root, textvariable=self.errorText)
 
         # Create the layout
         self.label.grid(row=0, column=0)
